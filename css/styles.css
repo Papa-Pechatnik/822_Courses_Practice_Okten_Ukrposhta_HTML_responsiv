@@ -4,6 +4,7 @@
 2.Basic style
     2.1 Basic tags 
     2.2 Basic class
+    2.3 Collaborative classes
 3.Header
     3.1 Header
 4.MAIN
@@ -13,6 +14,7 @@
 END Contents --- */
 /* ---------- 1.Variables ----------*/
 :root {
+  /* Color */
   --color-white: #FFFFFF;
   --color-Desert_Storm: #F8F8F8;
   --color-Gray_Chateau: #99A2AA;
@@ -21,6 +23,126 @@ END Contents --- */
   --color-Saffron: #FEC524;
   --color-Green_Vogue: #042C4B;
   --color-Prussian_Blue: #0E2F4B;
+  --color-Prussian_Blue: #2d363d;
   --color-box-shadow: rgba(95, 98, 102, 0.17);
   --color-box-shadow-activ: rgba(0, 0, 0, 0.5);
+  /* sizes */
+  --max-width: $max-width;
+}
+
+/* ---------- 2.Basic style----------*/
+/* 2.1 Basic tags */
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  width: 100vw;
+  height: 100vh;
+  background: aquamarine;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-family: "Rubik", sans-serif;
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  font-size: clamp(1.75rem, -0.0682rem + 9.091vw, 3rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* 2.2 Basic class */
+.container {
+  margin-inline: auto;
+  max-width: 1170px;
+  padding-left: clamp(0.625rem, -0.0568rem + 3.409vw, 2.5rem);
+  padding-right: clamp(0.625rem, -0.0568rem + 3.409vw, 2.5rem);
+  border: 2px solid red;
+}
+
+.background-Saffron {
+  background: var(--color-Saffron, #fec524);
+}
+
+.background-Desert_Storm {
+  background: var(--color-Desert_Storm, #F8F8F8);
+}
+
+.background-Green_Vogue {
+  background: var(--color-Green_Vogue, #042C4B);
+}
+
+.startup-business-subtitel {
+  font-family: "Open Sans", sans-serif;
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* 4.2 MAIN main */
+/* 4.2.2 Section Startup business */
+.startup-business {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: clamp(2.5rem, -1.5rem + 20vw, 7.5rem);
+  margin-bottom: clamp(3.125rem, -1.875rem + 25vw, 9.375rem);
+}
+
+.startup-business-img {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  height: 100%;
+}
+
+.startup-business-header {
+  z-index: 1;
+  max-width: clamp(19.375rem, 0.3124rem + 95.313vw, 38.4375rem);
+}
+.startup-business-header h3 {
+  color: var(--color-Desert_Storm, #f8f8f8);
+  text-wrap: balance;
+}
+
+.startup-business-subtitel {
+  width: clamp(19.375rem, 16.25rem + 15.625vw, 22.5rem);
+  color: var(--color-Gray_Chateau, #99A2AA);
+  margin-top: 36px;
+  margin-bottom: 44px;
+}
+
+.startup-business__link {
+  display: inline-block;
+  box-sizing: border-box;
+  width: clamp(17.8125rem, 15.5397rem + 11.364vw, 19.375rem);
+  padding: 1.75rem 0;
+  border-radius: 10px;
+  background: var(--color-Sunglow, #fdc13d);
+  font-family: "Rubik", sans-serif;
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  transition: 0.5s;
+}
+.startup-business__link:focus, .startup-business__link:focus-visible, .startup-business__link:hover {
+  box-shadow: 0 3px 35px 0 var(--color-box-shadow-activ, rgba(0, 0, 0, 0.5));
+  background: var(--color-Desert_Storm, #f8f8f8);
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 374.98px) {
+  .startup-business__link {
+    align-self: center;
+  }
 }/*# sourceMappingURL=styles.css.map */
