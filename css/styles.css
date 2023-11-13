@@ -1,0 +1,26 @@
+/* --- Contents
+
+1.Variables
+2.Basic style
+    2.1 Basic tags 
+    2.2 Basic class
+3.Header
+    3.1 Header
+4.MAIN
+    4.1 MAIN Header 
+@media
+
+END Contents --- */
+/* ---------- 1.Variables ----------*/
+:root {
+  --color-white: #FFFFFF;
+  --color-Desert_Storm: #F8F8F8;
+  --color-Gray_Chateau: #99A2AA;
+  --color-Dove_Gray: #757575;
+  --color-Sunglow: #FDC13D;
+  --color-Saffron: #FEC524;
+  --color-Green_Vogue: #042C4B;
+  --color-Prussian_Blue: #0E2F4B;
+  --color-box-shadow: rgba(95, 98, 102, 0.17);
+  --color-box-shadow-activ: rgba(0, 0, 0, 0.5);
+}/*# sourceMappingURL=styles.css.map */
