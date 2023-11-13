@@ -1,0 +1,44 @@
+/* Rubik - 400 */
+@font-face {
+  font-family: 'Rubik';
+  src: url("../fonts/Rubik/Rubik-Regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+      url("../fonts/Rubik/Rubik-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/Rubik/Rubik-Regular.woff2") format("woff2"), /* Super Modern Browsers */
+      url("../fonts/Rubik/Rubik-Regular.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/Rubik/Rubik-Regular.ttf") format("truetype"), /* Safari, Android, iOS */ 
+      url("../fonts/Rubik/Rubik-Regular.svg#Rubik-Regular") format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  }
+
+/* Rubik - 700 */
+@font-face {
+  font-family: 'Rubik';
+  src: url("../fonts/Rubik/Rubik-Bold.eot"); /* IE9 Compat Modes */
+  src: local(""),
+      url("../fonts/Rubik/Rubik-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/Rubik/Rubik-Bold.woff2") format("woff2"), /* Super Modern Browsers */
+      url("../fonts/Rubik/Rubik-Bold.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/Rubik/Rubik-Bold.ttf") format("truetype"), /* Safari, Android, iOS */ 
+      url("../fonts/Rubik/Rubik-Bold.svg#Rubik-Bold") format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Open Sans - 400 */
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../fonts/Open_Sans/OpenSans-Regular.eot.eot"); /* IE9 Compat Modes */
+  src: local(""),
+      url("../fonts/Open_Sans/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("../fonts/Open_Sans/OpenSans-Regular.woff2") format("woff2"), /* Super Modern Browsers */
+      url("../fonts/Open_Sans/OpenSans-Regular.woff") format("woff"), /* Modern Browsers */
+      url("../fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype"), /* Safari, Android, iOS */ 
+      url("../fonts/Open_Sans/OpenSans-Regular.svg#OpenSans-Regular") format("svg"); /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
