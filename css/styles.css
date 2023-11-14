@@ -8,7 +8,10 @@
 3.Header
     3.1 Header
 4.MAIN
-    4.1 MAIN Header 
+    4.1 MAIN Header
+    4.2 MAIN main
+        4.2.2 Section Startup business
+        4.2.3 Section Financial services
 @media
 
 END Contents --- */
@@ -55,6 +58,15 @@ h3 {
   line-height: 1.25;
 }
 
+h4 {
+  font-family: "Rubik", sans-serif;
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  font-size: clamp(1.125rem, 0.5796rem + 2.727vw, 1.5rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.33;
+}
+
 /* 2.2 Basic class */
 .container {
   margin-inline: auto;
@@ -76,7 +88,17 @@ h3 {
   background: var(--color-Green_Vogue, #042C4B);
 }
 
-.startup-business-subtitel {
+.startup-business {
+  display: flex;
+  justify-content: start;
+}
+
+.financial-services-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.financial-services-text, .startup-business-subtitel {
   font-family: "Open Sans", sans-serif;
   color: var(--color-Prussian_Blue, #0e2f4b);
   font-size: 1rem;
@@ -89,8 +111,6 @@ h3 {
 /* 4.2.2 Section Startup business */
 .startup-business {
   position: relative;
-  display: flex;
-  justify-content: start;
   align-items: center;
   margin-top: clamp(2.5rem, -1.5rem + 20vw, 7.5rem);
   margin-bottom: clamp(3.125rem, -1.875rem + 25vw, 9.375rem);
@@ -114,7 +134,7 @@ h3 {
 
 .startup-business-subtitel {
   width: clamp(19.375rem, 16.25rem + 15.625vw, 22.5rem);
-  color: var(--color-Gray_Chateau, #99A2AA);
+  color: var(--color-Gray_Chateau, #99a2aa);
   margin-top: 36px;
   margin-bottom: 44px;
 }
@@ -141,6 +161,129 @@ h3 {
   transition: 0.5s;
 }
 
+/* 4.2.3 Section Financial services */
+.financial-services {
+  padding-top: clamp(3.125rem, -6.25008rem + 27.778vw, 6.25rem);
+  padding-bottom: clamp(2.5rem, -4.99993rem + 22.222vw, 5rem);
+}
+
+.financial-services-wrapper {
+  padding-top: 3.125rem;
+  padding-bottom: 2.5rem;
+  border-radius: 10px;
+  background: var(--color-Sunglow, #fdc13d);
+}
+
+.financial-services-box {
+  width: 85%;
+}
+
+.financial-services-text {
+  margin-top: 0.875rem;
+  margin-bottom: 0.6875rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.financial-services-arrow {
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.financial-services-arrow:hover {
+  color: var(--color-Desert_Storm, #f8f8f8);
+}
+
+.financial-services-titel {
+  margin-top: clamp(2.5rem, -1.5rem + 20vw, 7.5rem);
+  margin-bottom: 2rem;
+}
+
+.transfers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
+.transfers-item {
+  height: max-content;
+  width: clamp(14.6875rem, 1.125rem + 35vw, 16.875rem);
+  aspect-ratio: 1/1;
+}
+.transfers-item[data-transfers-item=on-off] {
+  display: none;
+}
+
+.transfers-item__link {
+  background-color: var(--color-white, #ffffff);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  padding: 30px;
+  box-sizing: border-box;
+  width: inherit;
+  aspect-ratio: inherit;
+}
+.transfers-item__link:hover * {
+  color: var(--color-white, #ffffff);
+}
+.transfers-item__link.money-transfers__color {
+  background-image: url("../img/money-transfers.svg");
+}
+.transfers-item__link.money-transfers__color:hover {
+  background-color: #A6E9E9;
+}
+.transfers-item__link.international-transfers__color {
+  background-image: url("../img/international-transfers.svg");
+}
+.transfers-item__link.international-transfers__color:hover {
+  background-color: #0056AF;
+}
+.transfers-item__link.insurance__color {
+  background-image: url("../img/insurance.svg");
+}
+.transfers-item__link.insurance__color:hover {
+  background-color: #dc3545;
+}
+
+.transfers-item-arrow {
+  font-family: "Rubik", sans-serif;
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.43;
+  margin-top: 0.8125rem;
+}
+
+/* ---------- @media ----------*/
+@media screen and (max-width: 939.98px) {
+  .transfers {
+    justify-content: space-around;
+  }
+  .transfers-item[data-transfers-item=on-off] {
+    display: block;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 539.98px) {
+  .transfers {
+    justify-content: center;
+  }
+  .transfers-item {
+    width: 16.875rem;
+  }
+  .transfers-item[data-transfers-item=on-off] {
+    display: none;
+  }
+}
 @media screen and (max-width: 374.98px) {
   .startup-business__link {
     align-self: center;
