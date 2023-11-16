@@ -7,6 +7,7 @@
     2.3 Collaborative classes
 3.Header
     3.1 Header
+    3.2 Header nav
 4.MAIN
     4.1 MAIN Header
     4.2 MAIN main
@@ -53,6 +54,19 @@ body {
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-family: "Rubik", sans-serif;
+  color: var(--color-white, #ffffff);
+  font-size: 2.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 h3 {
@@ -103,7 +117,7 @@ h5 {
   background: var(--color-Green_Vogue, #042C4B);
 }
 
-.postcode, .startup-business {
+.postcode, .startup-business, .nav-items {
   display: flex;
   justify-content: start;
 }
@@ -111,6 +125,11 @@ h5 {
 .financial-services-wrapper {
   display: flex;
   justify-content: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .Post-office {
@@ -126,6 +145,59 @@ h5 {
   font-style: normal;
   font-weight: 400;
   line-height: 1.25;
+}
+
+/* ---------- 3.HEADER ----------*/
+/* 3.1 Header */
+.header-background {
+  background: var(--color-white);
+}
+
+.header-logo {
+  width: 11.625rem;
+  height: 3.125rem;
+  padding-top: clamp(0.9375rem, 0.4911rem + 2.232vw, 1.5625rem);
+  padding-bottom: 0.9375rem;
+}
+
+.menu-burger {
+  display: none;
+}
+
+/* 3.2 Header nav */
+.nav-items {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  column-gap: 30px;
+}
+
+.nav-item_link {
+  font-family: "Rubik", sans-serif;
+  color: var(--color-Gray_Chateau, #99a2aa);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav-item_link:after {
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  background-color: var(--color-Prussian_Blue, #0e2f4b);
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  -webkit-transition: width 0.3s ease-in-out;
+  -moz--transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.nav-item_link:focus, .nav-item_link:focus-visible, .nav-item_link:hover {
+  color: var(--color-Prussian_Blue, #0e2f4b);
+}
+.nav-item_link:hover:after, .nav-item_link:focus:after {
+  width: 100%;
 }
 
 /* 4.2 MAIN main */
@@ -551,6 +623,19 @@ h5 {
   }
 }
 @media screen and (max-width: 767.98px) {
+  .menu-burger {
+    width: 10px;
+    height: 10px;
+    background: red;
+    display: block;
+  }
+  .nav-main {
+    display: none;
+  }
+  .main-header {
+    min-height: 21.875rem;
+    max-height: clamp(21.875rem, 17.4108rem + 22.321vw, 28.125rem);
+  }
   .Post-office {
     background-position: center bottom 15%;
   }
