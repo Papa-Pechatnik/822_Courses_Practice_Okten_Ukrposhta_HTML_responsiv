@@ -16,7 +16,6 @@
         4.2.4 Article News & Business services
             4.2.4.1 Section News & Business services
             4.2.4.2 Section Business services
-
     4.3 MAIN footer
 5.FOOTER
 6. MEDIA
@@ -49,7 +48,6 @@ body {
   font-weight: 400;
   width: 100vw;
   height: 100vh;
-  background: aquamarine;
 }
 
 a {
@@ -96,10 +94,19 @@ h5 {
   line-height: 1.33;
 }
 
+h6 {
+  font-family: "Rubik", sans-serif;
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75;
+}
+
 /* 2.2 Basic class */
 .container {
   margin-inline: auto;
-  max-width: 1170px;
+  max-width: var(--max-width);
   padding-left: clamp(0.625rem, -0.0568rem + 3.409vw, 2.5rem);
   padding-right: clamp(0.625rem, -0.0568rem + 3.409vw, 2.5rem);
   border: 2px solid red;
@@ -110,14 +117,14 @@ h5 {
 }
 
 .background-Desert_Storm {
-  background: var(--color-Desert_Storm, #F8F8F8);
+  background: var(--color-Desert_Storm, #f8f8f8);
 }
 
 .background-Green_Vogue {
-  background: var(--color-Green_Vogue, #042C4B);
+  background: var(--color-Green_Vogue, #042c4b);
 }
 
-.postcode, .startup-business, .nav-items {
+.postcode, .Post-office, .startup-business, .nav-items {
   display: flex;
   justify-content: start;
 }
@@ -130,12 +137,6 @@ h5 {
 .header {
   display: flex;
   justify-content: space-between;
-}
-
-.Post-office {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .financial-services-text, .startup-business-subtitel {
@@ -358,6 +359,7 @@ h5 {
 
 /* 4.2.3 Section Post office */
 .Post-office {
+  align-items: center;
   padding-top: clamp(3.125rem, -11.21875rem + 42.5vw, 8.4375rem);
   padding-bottom: 135px;
   background-image: url("../img/post_office.svg");
@@ -569,7 +571,8 @@ h5 {
 
 .Business-services-item {
   position: relative;
-  flex: 1 1 340px;
+  flex: 1 0 340px;
+  min-width: 25%;
   border-radius: 10px;
   background: var(--color-white, #ffffff);
 }
@@ -593,6 +596,92 @@ h5 {
   box-shadow: 0 3px 15px 0 var(--color-box-shadow-activ, rgba(0, 0, 0, 0.35));
 }
 .Business-services__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 4.3 MAIN footer */
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.main-footer-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.75rem;
+  padding-top: clamp(2.5rem, 0.1636rem + 11.682vw, 5.625rem);
+  padding-bottom: clamp(1.25rem, -0.1518rem + 7.009vw, 3.125rem);
+}
+
+.main-footer-titel {
+  padding-top: clamp(0rem, -0.9814rem + 4.907vw, 1.3125rem);
+  padding-bottom: clamp(1rem, 0.0654rem + 4.673vw, 2.25rem);
+  color: var(--color-white, #ffffff);
+}
+
+.main-footer-subtitel {
+  font-family: "Open Sans", sans-serif;
+  color: var(--color-Prussian_Blue, #0e2f4b);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875;
+}
+
+.mobil-items {
+  padding-top: 1.5625rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5625rem;
+}
+
+.mobil-item {
+  width: 10.625rem;
+  height: 3.125rem;
+}
+
+.mobil-item-img {
+  min-width: 130px;
+  max-width: 10.625rem;
+  width: 100%;
+  height: auto;
+}
+
+.social-networks-items {
+  padding-top: 15px;
+  display: flex;
+  column-gap: 1.25rem;
+}
+
+.social-networks-item {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.social-networks-item:focus, .social-networks-item:focus-visible, .social-networks-item:hover {
+  border-radius: 50%;
+  border: 2px solid var(--color-Green_Vogue, #042c4b);
+}
+.social-networks-item:focus .social-networks_link, .social-networks-item:focus-visible .social-networks_link, .social-networks-item:hover .social-networks_link {
+  transform: scale(1.1);
+}
+
+.social-networks_link {
+  width: 2rem;
+  height: 2rem;
+}
+.social-networks_link::after {
   content: "";
   position: absolute;
   top: 0;
@@ -637,6 +726,7 @@ h5 {
     max-height: clamp(21.875rem, 17.4108rem + 22.321vw, 28.125rem);
   }
   .Post-office {
+    justify-content: center;
     background-position: center bottom 15%;
   }
   .Post-office-box {
