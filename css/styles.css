@@ -243,7 +243,6 @@ input[type=number] {
 .main-header_section {
   position: relative;
   width: 100%;
-  border: 2x solid red;
   height: 75%;
 }
 
