@@ -237,18 +237,18 @@ input[type=number] {
 .main-header {
   min-height: 28.125rem;
   height: 43.9453125vh;
+  display: flex;
 }
 
 .main-header_section {
   position: relative;
-  display: flex;
-  justify-content: center;
   width: 100%;
+  border: 2x solid red;
   height: 75%;
 }
 
 .header-calc {
-  width: 98%;
+  width: 85%;
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -263,6 +263,13 @@ input[type=number] {
   border-radius: 10px;
   background: var(--color-white, #ffffff);
   box-shadow: 0px 3px 35px 0px var(--color-box-shadow, rgba(95, 98, 102, 0.17));
+}
+.header-calc-item:hover .header-calc__link {
+  cursor: pointer;
+  color: var(--color-Prussian_Blue, #0E2F4B);
+}
+.header-calc-item:hover svg path[fill="#99A2AA"] {
+  fill: var(--color-Prussian_Blue, #0E2F4B);
 }
 
 .header-calc__link {
@@ -337,8 +344,7 @@ input[type=number].TTN-number {
 /* 4.2.1 Section Postal services */
 .Post-services {
   min-height: 50rem;
-  height: 78.125vh;
-  padding-top: 3.875rem;
+  padding-top: 6.25rem;
 }
 
 .Post-services_section {
@@ -964,6 +970,10 @@ input[type=number].TTN-number {
   .News-item {
     width: 98%;
   }
+  .Post-services {
+    min-height: 50rem;
+    padding-top: clamp(9.375rem, 40.95956rem - 49.351vw, 21.25rem);
+  }
 }
 @media screen and (max-width: 939.98px) {
   .transfers {
@@ -1021,9 +1031,6 @@ input[type=number].TTN-number {
   }
 }
 @media screen and (max-width: 539.98px) {
-  .header-calc-item {
-    height: 3rem;
-  }
   .Post-services_section {
     flex-direction: column;
     justify-content: start;
@@ -1055,7 +1062,6 @@ input[type=number].TTN-number {
   .Post-services {
     max-height: max-content;
     height: 100%;
-    padding-top: 3.875rem;
   }
   .Post-services_section {
     height: max-content;
