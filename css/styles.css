@@ -37,7 +37,7 @@ END Contents --- */
   --color-box-shadow: rgba(95, 98, 102, 0.17);
   --color-box-shadow-activ: rgba(0, 0, 0, 0.5);
   /* sizes */
-  --max-width: $max-width;
+  --max-width: 73.125rem;
 }
 
 /* ---------- 2.Basic style----------*/
@@ -118,10 +118,9 @@ input[type=number] {
 /* 2.2 Basic class */
 .container {
   margin-inline: auto;
-  max-width: var(--max-width);
+  max-width: 73.125rem;
   padding-left: clamp(0.625rem, -0.0568rem + 3.409vw, 2.5rem);
   padding-right: clamp(0.625rem, -0.0568rem + 3.409vw, 2.5rem);
-  border: 2px solid red;
 }
 
 .background-Saffron {
@@ -162,7 +161,7 @@ input[type=number] {
   justify-content: space-between;
 }
 
-.Post-services_section, .Post-services {
+.Post-services, .header-calc__link, .header-calc-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -186,10 +185,6 @@ input[type=number] {
 
 /* ---------- 3.HEADER ----------*/
 /* 3.1 Header */
-.header-background {
-  background: var(--color-white);
-}
-
 .header-logo {
   width: 11.625rem;
   height: 3.125rem;
@@ -245,8 +240,39 @@ input[type=number] {
 }
 
 .main-header_section {
+  position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 75%;
+}
+
+.header-calc {
+  width: 98%;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+  row-gap: 1.25rem;
+  top: 105%;
+}
+
+.header-calc-item {
+  flex: 1 1 270px;
+  height: 5rem;
+  border-radius: 10px;
+  background: var(--color-white, #ffffff);
+  box-shadow: 0px 3px 35px 0px var(--color-box-shadow, rgba(95, 98, 102, 0.17));
+}
+
+.header-calc__link {
+  column-gap: 1.5rem;
+  font-family: "Rubik", sans-serif;
+  color: var(--color-Gray_Chateau, #99a2aa);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 .main-header-titel {
@@ -313,13 +339,14 @@ input[type=number].TTN-number {
   min-height: 50rem;
   height: 78.125vh;
   padding-top: 3.875rem;
-  display: flex;
-  align-items: stretch;
 }
 
 .Post-services_section {
+  position: relative;
   width: 100%;
   height: 78.75%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Post-services_header {
@@ -395,17 +422,18 @@ input[type=number].TTN-number {
 
 /* 4.2.2 Section Startup business */
 .startup-business {
+  box-sizing: border-box;
   position: relative;
   align-items: center;
-  margin-top: clamp(2.5rem, -1.5rem + 20vw, 7.5rem);
-  margin-bottom: clamp(3.125rem, -1.875rem + 25vw, 9.375rem);
+  padding-top: clamp(2.5rem, -1.5rem + 20vw, 7.5rem);
+  padding-bottom: clamp(3.125rem, -1.875rem + 25vw, 9.375rem);
 }
 
 .startup-business-img {
   position: absolute;
   z-index: 0;
   right: 0;
-  height: 100%;
+  height: 50%;
 }
 
 .startup-business-header {
@@ -914,6 +942,18 @@ input[type=number].TTN-number {
 }
 
 /* ---------- 6. MEDIA ----------*/
+@media screen and (max-width: 1069.98px) {
+  .header-calc {
+    row-gap: 0.625rem;
+  }
+  .header-calc-item {
+    flex: 1 1 33%;
+    min-width: 270px;
+  }
+  .header-calc-item {
+    width: 50%;
+  }
+}
 @media screen and (max-width: 1023.98px) {
   .News-items {
     display: flex;
@@ -933,7 +973,7 @@ input[type=number].TTN-number {
     display: block;
     visibility: hidden;
   }
-  .footer p {
+  .footer-off p {
     display: block;
     color: var(--color-Desert_Storm, #f8f8f8);
   }
@@ -981,6 +1021,9 @@ input[type=number].TTN-number {
   }
 }
 @media screen and (max-width: 539.98px) {
+  .header-calc-item {
+    height: 3rem;
+  }
   .Post-services_section {
     flex-direction: column;
     justify-content: start;
